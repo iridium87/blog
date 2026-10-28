@@ -1,8 +1,8 @@
 title: "Blog"
 email: "your-email@example.com"
 description: "A personal blog built with Jekyll and GitHub Pages."
-baseurl: "/blog"
-url: "https://yourusername.github.io"
+baseurl: "
+url: "https://blog.smvt.eu"
 
 # Timezone settings
 timezone: "Europe/Vienna"
