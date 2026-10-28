@@ -1,0 +1,35 @@
+title: "Blog"
+email: "your-email@example.com"
+description: "A personal blog built with Jekyll and GitHub Pages."
+baseurl: "/blog"
+url: "https://yourusername.github.io"
+
+# Timezone settings
+timezone: "Europe/Vienna"
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Collections
+collections:
+  posts:
+    layout: post
+    title: "Posts"
+
+# Defaults
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      categories: "notes"
+
+# Exclude
+exclude:
+  - Gemfile*
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title "{{ site.title }} Feed" href="{{ site.baseurl }}/feed.xml">
+  <link rel="sitemap" href="{{ site.baseurl }}/sitemap.xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ site.baseurl }}/" class="site-logo">{{ site.title }}</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/posts/">Posts</a></li>
+          <li><a href="{{ site.baseurl }}/about/">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built with Jekyll and GitHub Pages.</p>
+    </div>
+  </footer>
+</body>
+</html>
