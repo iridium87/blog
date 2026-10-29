@@ -2,36 +2,237 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <link rel="alternate" type="application/rss+xml" title "{{ site.title }} Feed" href="{{ site.baseurl }}/feed.xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=12.0, minimum-scale=1.0, user-scalable=yes">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ site.baseurl }}/feed.xml">
   <link rel="sitemap" href="{{ site.baseurl }}/sitemap.xml">
+  <style>
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/roboto/static/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/roboto/static/Roboto-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/roboto/static/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/roboto/static/Roboto-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  max-width: 800px;
+  padding-left: 2%;
+  padding-right: 3%;
+  margin: 0 auto;
+  background: white;
+}
+
+:root {
+  --title-font-size: 22px;
+  --body-font-size: inherit;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --title-font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --title-font-size: 15px;
+    --body-font-size: 12px;
+  }
+}
+
+* {
+  font-size: var(--body-font-size);
+}
+
+h, div.heading {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 4ch;
+}
+
+h::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(23, 86, 169);
+}
+
+a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+a.title, a.title:visited {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--title-font-size);
+}
+
+a.title:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+img {
+  border: 1px solid black;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  padding-top: 1ch;
+  font-size: 85%;
+  text-align: center;
+}
+
+.trivia {
+  border-left: 1px black solid;
+  padding-left: 1ch;
+}
+
+.trivia::before {
+  font-weight: bold;
+  text-decoration: underline;
+  padding-right: 1ch;
+  content: "Trivia:";
+}
+
+p, ul, ol, div {
+  text-align: justify;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.2em;
+}
+
+blockquote {
+  color: #828282;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2ch;
+  text-align: justify;
+  border-left: 4px solid #e8e8e8;
+}
+
+blockquote a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+blockquote a:hover {
+  text-decoration: underline;
+}
+
+blockquote cite::before {
+  content: "— ";
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  margin-top: 10px;
+  color: #828282;
+  text-align: right;
+}
+
+code {
+  font-weight: bold;
+  background-color: #e1e1e1;
+  border-radius: 0.5ch;
+  padding-left: 0.3ch;
+  padding-right: 0.3ch;
+}
+
+pre {
+  border: solid black 1px;
+  background-color: #EEEEEE;
+  padding-left: 2ch;
+  padding-right: 1ch;
+  padding-top: 2ch;
+  padding-bottom: 1ch;
+  overflow: auto;
+}
+
+.red {
+  color: red;
+}
+  </style>
+  <title>{{ page.title }} | {{ site.title }}</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="{{ site.baseurl }}/" class="site-logo">{{ site.title }}</a>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-          <li><a href="{{ site.baseurl }}/posts/">Posts</a></li>
-          <li><a href="{{ site.baseurl }}/about/">About</a></li>
-        </ul>
-      </nav>
+  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 2ch;">
+    <a href="{{ site.baseurl }}/" class="title">{{ site.title }}</a>
+    <div style="display: flex; gap: 1.5ch; align-items: center;">
+      <!-- Github -->
+      <a href="https://github.com/{{ site.github }}">
+        <svg fill="#555" aria-hidden="true" height="21" width="21" version="1.1" viewBox="0 0 24 24">
+          <path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path>
+        </svg>
+      </a>
+      <!-- Email -->
+      <a href="/cdn-cgi/l/email-protection#116a6a31627865743f747c70787d316c6c">
+        <svg fill="#555" aria-hidden="true" height="27" width="27" version="1.1" viewBox="0 0 24 24">
+          <path d="M0 3 h24 v17.5 H0 Z M24 5.5 L12 13 L0 5.5 v2 L12 15 L24 7.5 Z"></path>
+        </svg>
+      </a>
+      <!-- RSS -->
+      <a href="{{ site.baseurl }}/feed.xml">
+        <svg fill="#555" height="20" width="20" version="1.1" viewBox="0 0 24 24">
+          <path d="M4 10a8 8 0 1 0 8 0 8 8 0 0 0-8 8z" fill="#555"/>
+          <path d="M4 12a4 4 0 1 0 4 0 4 4 0 0 0-4 4z" fill="#555"/>
+          <path d="M4 14a2 2 0 1 0 2 0 2 2 0 0 0-2 2z" fill="#555"/>
+        </svg>
+      </a>
     </div>
-  </header>
-
-  <main class="site-content">
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built with Jekyll and GitHub Pages.</p>
-    </div>
-  </footer>
-</body>
+  </div>
+  <br>
+  {{ content }}
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
