@@ -3,22 +3,23 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Notes
+<h>About</h>
+<p>This is my personal website. Opinions are my own.</p>
+<p>I'm a developer and tinkerer interested in AI, games, and systems programming. You can find me on GitHub at <a href="https://github.com/{{ site.github }}">@{{ site.github }}</a>.</p>
+<p><a href="/about/">Read more about me →</a></p>
 
-Hello! This is my personal knowledge base and notes site, built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
-
-## How it works
-
-This site is incredibly simple: I write notes as Markdown files in the `_posts/` directory, and Jekyll automatically turns them into a publishable blog. Every time I push to GitHub, GitHub Pages rebuilds and deploys the site.
-
-## Recent Posts
-
-{% for post in site.posts %}
-<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-<p>{{ post.excerpt }}</p>
-<small>{{ post.date | date: "%B %d, %Y" }}</small>
+<h>Articles</h>
+<p style="text-align: left; margin-bottom: 1ch;">
+{% for post in site.posts reversed %}
+  {{ post.date | date: "%d/%m/%Y" }}: <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br>
 {% endfor %}
+</p>
 
-## About Me
-
-I'm a developer and tinkerer interested in AI, games, and systems programming. You can find me on GitHub at [@yourusername](https://github.com/yourusername).
+<h>Magic: The Gathering</h2>
+<p style="text-align: left; margin-bottom: 1ch;">
+{% for post in site.posts %}
+  {% if post.categories contains "mtg" %}
+    {{ post.date | date: "%d/%m/%Y" }}: <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>
+  {% endif %}
+{% endfor %}
+</p>
