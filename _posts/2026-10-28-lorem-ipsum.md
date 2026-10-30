@@ -35,4 +35,4 @@ def hello_world():
 
 [Link example](https://example.com)
 
-![Image example]({{ site.baseurl }}/assets/css/images/test_image.png)
+<img src="{{ site.baseurl }}/assets/images/test_image.png" alt="Image example" style="max-width: 400px; height: auto;">
