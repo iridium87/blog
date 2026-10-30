@@ -78,14 +78,14 @@ a:hover {
 code {
   font-family: 'Fira Code', monospace;
   font-weight: normal;
-  background: #e6f2ff;
+  background: #f8fbfc;
   padding: 0 2px;
   border-radius: 3px;
   color: #1a1a1a;
 }
 
 pre {
-  background: #e6f2ff;
+  background: #f8fbfc;
   color: #1a1a1a;
   padding: 15px;
   border-radius: 4px;
