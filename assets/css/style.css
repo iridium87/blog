@@ -8,7 +8,9 @@ body {
   font-family: 'JetBrains Mono', monospace;
   line-height: 1.6;
   color: #333;
-  background: #fafafa;
+  background: #fcf5e8;
+  background-image: radial-gradient(#e3dac9 1px, transparent 1px);
+  background-size: 25px 25px;
   margin: 0;
   padding: 0;
 }
