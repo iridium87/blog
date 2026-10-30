@@ -77,22 +77,26 @@ a:hover {
 
 code {
   font-family: 'Fira Code', monospace;
-  background: #f0f0f0;
+  font-weight: normal;
+  background: #f8f8f8;
   padding: 0 2px;
   border-radius: 3px;
+  color: #1a1a1a;
 }
 
 pre {
-  background: #1a1a1a;
-  color: #fff;
+  background: #f8f8f8;
+  color: #1a1a1a;
   padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
+  border: 1px solid #e0e0e0;
 }
 
 pre code {
   background: none;
   padding: 0;
+  font-family: 'Fira Code', monospace;
 }
 
 blockquote {
@@ -169,6 +173,24 @@ img {
 .pagination a:hover {
   background: #f0f0f0;
 }
+
+/* Syntax highlighting */
+.k { color: #000070; font-weight: bold; } /* keyword */
+.n { color: #191919; } /* name */
+.o { color: #000070; } /* operator */
+.p { color: #000; } /* punctuation */
+.c { color: #606060; font-style: italic; } /* comment */
+.s { color: #006600; } /* string */
+.nb { color: #0070b0; } /* name builtin */
+.nf { color: #006060; font-weight: bold; } /* name function */
+.kt { color: #006060; } /* keyword type */
+.mi { color: #006666; } /* number */
+.sa { color: #006600; } /* string apostrophe */
+.kc { color: #000070; font-weight: bold; } /* keyword constant */
+.kd { color: #000070; font-weight: bold; } /* keyword declaration */
+.kp { color: #000070; font-weight: bold; } /* keyword pseudo */
+.kn { color: #000070; font-weight: bold; } /* keyword namespace */
+.ks { color: #006600; } /* string backtick */
 
 /* Responsive */
 @media (max-width: 600px) {
