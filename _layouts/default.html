@@ -156,25 +156,43 @@ blockquote cite {
 code {
   font-family: 'Fira Code', monospace;
   font-weight: normal;
-  background-color: #f8f8f8;
-  border-radius: 0.5ch;
-  padding-left: 0.3ch;
-  padding-right: 0.3ch;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 pre {
-  border: solid black 1px;
-  background-color: #EEEEEE;
-  padding-left: 2ch;
-  padding-right: 1ch;
-  padding-top: 2ch;
-  padding-bottom: 1ch;
-  overflow: auto;
+  background: #fcf5e8;
+  color: #1a1a1a;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
 }
 
 .red {
   color: red;
 }
+
+/* Syntax highlighting */
+.k { color: #000070; font-weight: bold; } /* keyword */
+.n { color: #191919; } /* name */
+.o { color: #000070; } /* operator */
+.p { color: #000; } /* punctuation */
+.c { color: #606060; font-style: italic; } /* comment */
+.s { color: #006600; } /* string */
+.nb { color: #0070b0; } /* name builtin */
+.nf { color: #006060; font-weight: bold; } /* name function */
+.kt { color: #006060; } /* keyword type */
+.mi { color: #006666; } /* number */
+.sa { color: #006600; } /* string apostrophe */
+.kc { color: #000070; font-weight: bold; } /* keyword constant */
+.kd { color: #000070; font-weight: bold; } /* keyword declaration */
+.kp { color: #000070; font-weight: bold; } /* keyword pseudo */
+.kn { color: #000070; font-weight: bold; } /* keyword namespace */
+.ks { color: #006600; } /* string backtick */
   </style>
   <title>{{ page.title }} | {{ site.title }}</title>
 </head>
