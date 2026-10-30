@@ -86,13 +86,14 @@ code {
 }
 
 pre {
-  background: #fcf5e8;
+  background: #f8f8f8;
   color: #1a1a1a;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow-x: auto;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d0d0d0;
   margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 pre code {
