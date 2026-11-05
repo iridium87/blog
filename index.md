@@ -10,7 +10,7 @@ title: Home
 
 <h>Articles</h>
 <p style="text-align: left; margin-bottom: 1ch;">
-{% for post in site.posts reversed %}
+{% for post in site.posts %}
   {{ post.date | date: "%d/%m/%Y" }}: <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br>
 {% endfor %}
 </p>
