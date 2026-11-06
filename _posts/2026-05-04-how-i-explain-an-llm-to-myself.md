@@ -49,3 +49,8 @@ Should you let your dog chase the fox?
 Judgment call, the model can inform but should not decide.
 
 I think it is important to understand how LLMs work so you can control them, know what to expect, understand when they fail and most importantly — why they fail. It is just another tool at the end of the day.
+
+---
+
+<p style="text-align:center">∎</p>
+
